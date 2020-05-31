@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-        <nav class="header__content">
+        <nav class="header-content">
             <Logo></Logo>
             <Menu></Menu>
             <Search></Search>
@@ -31,7 +31,7 @@
         left: 0;
         width: 100%;
     }
-    .header__content {
+    .header-content {
         display: flex;
         justify-content: space-around;
         align-items: center;

@@ -5,9 +5,11 @@
             <div class="main-text">
                 <p class="main-text__header">Wuba<br/>luba<br/>dub-dub!</p>
             </div>
+            <!--<hr class="line" :class="{-->
+             <!--'hide' : !(videoFlag && (windowTop < videoBegins))}"/>-->
             <!--autoplay loop-->
             <video autoplay muted :class="{
-             'main-video__hide' : (videoFlag && (windowTop < videoBegins)),
+             'hide' : (videoFlag && (windowTop < videoBegins)),
              'main-video' : (!videoFlag || windowTop >= videoBegins)}">
                 <source src="../assets/RM.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
@@ -53,7 +55,7 @@
         justify-content: flex-start;
         max-width: 980px;
         margin: 0 auto;
-        /*padding-top: 0px;*/
+        padding-top: 35px;
         min-height: 1240px;
     }
     .main-content__pic {
@@ -61,6 +63,7 @@
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
+        background-origin: padding-box;
         background-size: 82%;
     }
     .main-text {
@@ -76,6 +79,16 @@
         line-height: 0.8em;
         margin: 0;
     }
+    .line {
+        position: fixed;
+        height: 4px;
+        width: 300px;
+        bottom: 0;
+        top: 735px;
+        left: 560px;
+        background-color: black;
+        border: none;
+    }
     .main-video {
         /*position: fixed;*/
         /*right: 0;*/
@@ -86,7 +99,7 @@
         margin: 0 -98px;
         /*display: none;*/
     }
-    .main-video__hide {
+    .hide {
         display: none;
     }
     .video-back {

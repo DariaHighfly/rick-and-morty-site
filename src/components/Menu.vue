@@ -40,9 +40,8 @@
     .menu-elem {
         font-size: 16px;
         color: #b2b2b2;
-        letter-spacing: 0.5px;
         cursor: pointer;
-        margin: 0 40px;
+        margin: 0 30px;
     }
     .menu-elem:hover {
         color: #d0d0d0;
