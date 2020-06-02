@@ -26,6 +26,7 @@
 <style scoped>
     .header {
         position: fixed;
+        z-index: 10;
         background-color: #2d2d2d;
         top: 0;
         left: 0;

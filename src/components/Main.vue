@@ -15,8 +15,6 @@
                 Your browser does not support HTML5 video.
             </video>
         </div>
-        <div class="video-back">
-        </div>
     </div>
 </template>
 
