@@ -1,16 +1,18 @@
 <template>
     <div class="main">
-        <div class="main-content" :class="{
-             'main-content__pic' : (videoFlag && (windowTop < videoBegins))}">
+        <div class="main-content">
             <div class="main-text">
                 <p class="main-text__header">Wuba<br/>luba<br/>dub-dub!</p>
             </div>
-            <!--<hr class="line" :class="{-->
-             <!--'hide' : !(videoFlag && (windowTop < videoBegins))}"/>-->
+            <div class="gap"></div>
             <!--autoplay loop-->
-            <video autoplay muted :class="{
-             'hide' : (videoFlag && (windowTop < videoBegins)),
-             'main-video' : (!videoFlag || windowTop >= videoBegins)}">
+            <!--:current-time.prop="currentTime"-->
+            <!--@timeupdate="currentTime = $event.target.currentTime"-->
+            <video muted
+                   id="video"
+                   :class="{
+                   'main-video' : (videoFixedFlag && (windowTop < videoStops)),
+                   'fixed' : (!videoFixedFlag || (windowTop >= videoStops))}">
                 <source src="../assets/RM.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
@@ -24,8 +26,11 @@
         data(){
             return {
                 windowTop: 0,
-                videoFlag: 1,
-                videoBegins: 535,
+                videoBegins: 310,
+                videoStops: 660,
+                videoFixedFlag: 1,
+                videoPlay: 0,
+                // currentTime: 0,
             };
         },
         mounted()
@@ -33,11 +38,27 @@
             let that = this;
             window.addEventListener("scroll", function() {
                 that.windowTop = window.scrollY;
-                if (that.videoFlag === 1 && window.scrollY > that.videoBegins) {
-                    that.videoFlag = 0;
+                if (that.videoPlay === 0 && window.scrollY > that.videoBegins) {
+                    that.videoPlay = 1;
                 }
+                if (that.videoFixedFlag === 1 && window.scrollY > that.videoStops) {
+                    that.videoFixedFlag = 0;
+                }
+                // if (window.scrollY > that.videoBegins && window.scrollY < that.videoStops) {
+                //     if (window.scrollY < 560) {
+                //         that.currentTime = (window.scrollY - that.videoBegins) * 0.007;
+                //     } else {
+                //         that.currentTime = (window.scrollY - that.videoBegins) * 0.02;
+                //     }
+                // }
             });
         },
+        watch: {
+            videoPlay(val) {
+                let videoElem = document.getElementById("video");
+                videoElem.play();
+            }
+        }
     }
 </script>
 
@@ -54,51 +75,50 @@
         max-width: 980px;
         margin: 0 auto;
         padding-top: 35px;
-        min-height: 1240px;
-    }
-    .main-content__pic {
-        background-image: url(../assets/main_background.png);
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-origin: padding-box;
-        background-size: 82%;
     }
     .main-text {
-        /*position: fixed;*/
-        /*bottom: 0;*/
-        margin: 170px 0 0 70px;
+        z-index: 1;
     }
     .main-text__header {
         font-family: 'Bebas Neue', sans-serif;
-        font-size: 170px;
+        font-size: 175px;
         color: #1d1d1d;
         text-transform: uppercase;
         line-height: 0.8em;
         margin: 0;
     }
-    .line {
-        position: fixed;
-        height: 4px;
-        width: 300px;
-        bottom: 0;
-        top: 735px;
-        left: 560px;
-        background-color: black;
-        border: none;
+    .gap {
+        height: 100px;
     }
-    .main-video {
-        /*position: fixed;*/
-        /*right: 0;*/
-        /*bottom: 0;*/
-        /*top: 110px;*/
-        width: 120%;
-        align-items: center;
-        margin: 0 -98px;
-        /*display: none;*/
+    @media screen and (min-device-width: 980px) {
+        .main-content {
+            min-height: 1180px;
+        }
+        .main-text {
+            z-index: 1;
+            margin: 150px 0 0 70px;
+        }
+        .main-video {
+            position: fixed;
+            top: 10%;
+            max-width: 980px;
+        }
+        .fixed {
+            position: inherit;
+            max-width: 980px;
+        }
     }
-    .hide {
-        display: none;
+    @media screen and (max-device-width: 980px) {
+        .main-text {
+            z-index: 1;
+            margin: 100px 0 0 70px;
+        }
+        .main-video {
+            display: none;
+        }
+        .fixed {
+            display: none;
+        }
     }
     .video-back {
         height: 800px;
