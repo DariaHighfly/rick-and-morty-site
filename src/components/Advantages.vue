@@ -74,22 +74,24 @@
     .advantages-content {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         margin: 30px 0;
+        flex-wrap: wrap;
     }
     .advantages-content-elem {
         display: flex;
         flex-direction: column;
         justify-items: center;
         align-items: center;
-        margin-right: 50px;
+        margin-right: 35px;
+        max-width: 200px;
     }
     .advantages-content-elem:last-child {
         margin-right: 0;
     }
     .advantages-content-elem__border {
-        border: 3px solid #000000;
+        border: 2px solid #000000;
         border-radius: 100%;
         padding: 30px;
     }
@@ -111,6 +113,7 @@
     .advantages-content-elem__text {
         font-size: 14px;
         text-align: center;
+        width: inherit;
         max-width: 95%;
     }
 </style>
