@@ -1,16 +1,16 @@
 <template>
     <div class="menu">
         <ul class="menu-content">
-            <li class="menu-elem">
+            <li class="menu-elem" @click="changePage('Main')">
                 <p class="menu-elem__title">Main</p>
             </li>
-            <li class="menu-elem">
+            <li class="menu-elem" @click="changePage('About')">
                 <p class="menu-elem__title">About</p>
             </li>
-            <li class="menu-elem">
+            <li class="menu-elem" @click="changePage('Advantages')">
                 <p class="menu-elem__title">Advantages</p>
             </li>
-            <li class="menu-elem">
+            <li class="menu-elem" @click="changePage('Contacts')">
                 <p class="menu-elem__title">Contacts</p>
             </li>
         </ul>
@@ -19,7 +19,12 @@
 
 <script>
     export default {
-        name: "Menu"
+        name: "Menu",
+        methods: {
+            changePage(name) {
+                this.$emit('changePage', name);
+            }
+        }
     }
 </script>
 

@@ -4,16 +4,16 @@
             <nav class="footer-menu">
                 <ul class="footer-menu-column">
                     <li class="footer-menu__title">General</li>
-                    <li class="footer-menu-elem">
+                    <li class="footer-menu-elem" @click="sendComponent('Main')">
                         <p class="footer-menu-elem__title">Main</p>
                     </li>
-                    <li class="footer-menu-elem">
+                    <li class="footer-menu-elem" @click="sendComponent('About')">
                         <p class="footer-menu-elem__title">About</p>
                     </li>
-                    <li class="footer-menu-elem">
+                    <li class="footer-menu-elem" @click="sendComponent('Advantages')">
                         <p class="footer-menu-elem__title">Advantages</p>
                     </li>
-                    <li class="footer-menu-elem">
+                    <li class="footer-menu-elem" @click="sendComponent('Contacts')">
                         <p class="footer-menu-elem__title">Contacts</p>
                     </li>
                 </ul>
@@ -49,7 +49,12 @@
 
 <script>
     export default {
-        name: "Footer"
+        name: "Footer",
+        methods: {
+            sendComponent(name) {
+                this.$emit('changePage', name);
+            }
+        }
     }
 </script>
 

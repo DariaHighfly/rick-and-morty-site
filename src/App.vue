@@ -1,11 +1,11 @@
 <template>
     <div id="app">
-        <Header></Header>
-        <Main></Main>
-        <About></About>
-        <Advantages></Advantages>
-        <Contacts></Contacts>
-        <Footer></Footer>
+        <Header @changePage="scrollToComponent"></Header>
+        <Main id="Main"></Main>
+        <About id="About"></About>
+        <Advantages id="Advantages"></Advantages>
+        <Contacts id="Contacts"></Contacts>
+        <Footer @changePage="scrollToComponent"></Footer>
     </div>
 </template>
 
@@ -27,6 +27,11 @@
             Advantages,
             Contacts,
             Footer
+        },
+        methods: {
+            scrollToComponent(name) {
+                document.getElementById(name).scrollIntoView();
+            }
         }
     }
 </script>

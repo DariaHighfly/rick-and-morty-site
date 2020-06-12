@@ -2,7 +2,7 @@
     <header class="header">
         <nav class="header-content">
             <Logo></Logo>
-            <Menu></Menu>
+            <Menu @changePage="sendComponent"></Menu>
             <Search></Search>
         </nav>
     </header>
@@ -20,6 +20,11 @@
             Menu,
             Search
         },
+        methods: {
+            sendComponent(name) {
+                this.$emit('changePage', name);
+            }
+        }
     }
 </script>
 

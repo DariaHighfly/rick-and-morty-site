@@ -90,7 +90,7 @@
     .gap {
         height: 100px;
     }
-    @media screen and (min-device-width: 980px) {
+    @media screen and (min-width: 980px) {
         .main-content {
             min-height: 1180px;
         }
@@ -108,7 +108,7 @@
             max-width: 980px;
         }
     }
-    @media screen and (max-device-width: 980px) {
+    @media screen and (max-width: 980px) {
         .main-text {
             z-index: 1;
             margin: 100px 0 0 70px;
