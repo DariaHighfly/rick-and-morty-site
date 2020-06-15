@@ -39,6 +39,8 @@
 <style>
     #app {
         font-family: Avenir, Helvetica, Arial, sans-serif;
+        min-width: 370px;
+        overflow: scroll;
     }
     body {
         margin: 0;

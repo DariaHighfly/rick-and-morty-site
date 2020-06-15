@@ -81,7 +81,8 @@
     }
     .main-text__header {
         font-family: 'Bebas Neue', sans-serif;
-        font-size: 175px;
+        /*font-size: 175px;*/
+        font-size: 21vh;
         color: #1d1d1d;
         text-transform: uppercase;
         line-height: 0.8em;

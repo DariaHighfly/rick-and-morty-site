@@ -74,17 +74,21 @@
         padding-top: 25px;
         max-width: 980px;
         margin: 0 auto;
+        flex-wrap: wrap;
     }
     .footer-menu {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
+        flex-wrap: wrap;
+        margin-left: 45px;
     }
     .footer-menu-column {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         margin: 0 0 10px 0;
+        padding: 0 40px 0 0;
         list-style: none;
     }
     .footer-menu__title {
@@ -99,6 +103,7 @@
         color: #b2b2b2;
         cursor: pointer;
         margin: 3px 0;
+
     }
     .footer-menu-elem:hover {
         color: #d0d0d0;
