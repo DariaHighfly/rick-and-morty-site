@@ -48,8 +48,6 @@
         margin: 10px 0 10px 0;
     }
     .contacts-content {
-        display: flex;
-        flex-direction: row;
         justify-content: center;
         align-items: flex-start;
         margin: 30px 0 30px 0;
@@ -91,12 +89,24 @@
         padding: 10px;
     }
     .contacts-content-column__map {
-        height: 350px;
-        width: auto;
+        height: auto;
+        width: 50vh;
         transform: scale(1);
         transition: 0.2s all ease;
     }
     .contacts-content-column__map:hover {
         transform: scale(1.02);
+    }
+    @media screen and (min-width: 980px) {
+        .contacts-content {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    @media screen and (max-width: 980px) {
+        .contacts-content {
+            display: flex;
+            flex-direction: column;
+        }
     }
 </style>

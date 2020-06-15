@@ -1,5 +1,5 @@
 <template>
-    <div class="menu">
+    <nav class="menu">
         <ul class="menu-content">
             <li class="menu-elem" @click="changePage('Main')">
                 <p class="menu-elem__title">Main</p>
@@ -14,7 +14,7 @@
                 <p class="menu-elem__title">Contacts</p>
             </li>
         </ul>
-    </div>
+    </nav>
 </template>
 
 <script>

@@ -134,12 +134,17 @@
     .footer-social__img {
         height: 30px;
         margin: 0 10px;
+        transform: scale(1);
+        transition: 0.2s all ease;
     }
     .footer-social__img:first-child {
         margin-left: 0;
     }
     .footer-social__img:last-child {
         margin-right: 0;
+    }
+    .footer-social__img:hover {
+        transform: scale(1.15);
     }
     .footer-rights {
         font-size: 12px;
