@@ -19,36 +19,6 @@
                 </ul>
             </li>
         </ul>
-        <!--<nav class="menu-box" v-if="isOpen">-->
-            <!--<ul class="menu-content">-->
-                <!--<li class="menu-elem" @click="changePage('Main')">-->
-                    <!--<p class="menu-elem__title">Main</p>-->
-                <!--</li>-->
-                <!--&lt;!&ndash;<li class="menu-elem" @click="changePage('About')">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<p class="menu-elem__title">About</p>&ndash;&gt;-->
-                <!--&lt;!&ndash;</li>&ndash;&gt;-->
-                <!--&lt;!&ndash;<li class="menu-elem" @click="changePage('Advantages')">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<p class="menu-elem__title">Advantages</p>&ndash;&gt;-->
-                <!--&lt;!&ndash;</li>&ndash;&gt;-->
-                <!--&lt;!&ndash;<li class="menu-elem" @click="changePage('Contacts')">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<p class="menu-elem__title">Contacts</p>&ndash;&gt;-->
-                <!--&lt;!&ndash;</li>&ndash;&gt;-->
-            <!--</ul>-->
-
-            <!--<ul>-->
-                <!--<li><a href="/">Главная</a></li>-->
-                <!--<li><a href="#">О блоге</a>-->
-                    <!--<ul>-->
-                        <!--<li><a href="/about">Об авторе</a></li>-->
-                        <!--<li><a href="/history">История блога</a></li>-->
-                        <!--<li><a href="/privacy-policy">Политика конфиденциальности</a></li>-->
-                        <!--<li><a href="/disclaimer">Отказ от ответственности</a></li>-->
-                    <!--</ul>-->
-                <!--</li>-->
-                <!--<li><a href="/sitemap">Карта сайта</a></li>-->
-                <!--<li><a href="/contact">Обратная связь</a></li>-->
-            <!--</ul>-->
-        <!--</nav>-->
     </div>
 </template>
 

@@ -7,11 +7,40 @@
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
+  <style>
+    #app {
+      margin-top: 100px;
+    }
+    .title {
+      font-size: 30px;
+      text-align: center;
+    }
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .content__border {
+      border: 2px solid #000000;
+      border-radius: 3px;
+      margin: 5px;
+      padding: 10px;
+    }
+    .content__img {
+      width: 80vh;
+      height: auto;
+    }
+  </style>
   <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <div id="app">
+      <noscript>
+        <p class="title">We're sorry but this site doesn't work properly without JavaScript enabled. Please enable it to continue.</p>
+      </noscript>
+      <div class="content">
+        <div class="content__border">
+          <img class="content__img" src="./no_js.jpg">
+        </div>
+      </div>
+    </div>
   </body>
 </html>

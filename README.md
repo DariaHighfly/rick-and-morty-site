@@ -1,24 +1,21 @@
-# site-template
+## Simple site example
 
-## Project setup
+You can see this site here:
+
+https://rick-and-morty-site.herokuapp.com/
+
+#### Project setup & run
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
 npm run serve
 ```
 
-### Compiles and minifies for production
+#### Make files for production
 ```
 npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+<img src="https://github.com/DariaHighfly/rick-and-morty-site/master/public/rm_img_1.png" width="100%" height="100%">
+<img src="https://github.com/DariaHighfly/rick-and-morty-site/master/public/rm_img_2.png" width="100%" height="100%">
+<img src="https://github.com/DariaHighfly/rick-and-morty-site/master/public/rm_img_3.png" width="100%" height="100%">
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
